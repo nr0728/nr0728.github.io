@@ -39,11 +39,14 @@ let min = 5;
 let second = 0;
 let running = false;
 let startTime = 0;
+let isSetStartTime = 0;
+let setStartTime = 0;
 
 function init() {
     min = 5;
     second = 0;
     startTime = new Date();
+    isSetStartTime = 0;
     FirstDisplay();
     document.getElementById('startButton').disabled = false;
 }
@@ -68,7 +71,7 @@ function updateTimerDisplay() {
     {
         remainingSecondsToShow -= 1;
         remainingMillisecondsToShow = 1000 - remainingMillisecondsToShow;
-        if(remainingSecondsToShow  < 0)
+        if(remainingSecondsToShow < 0)
         {
             remainingMinutes -= 1;
             remainingSecondsToShow = 59;
@@ -82,7 +85,14 @@ const go = () => {
     document.getElementById('stopButton').disabled = false;
     running = true;
     document.getElementById('startButton').disabled = true;
-    startTime = new Date() - (min * 60 + second) * 1000;
+    if (isSetStartTime)
+    {
+        startTime = new Date() - setStartTime + startTime;
+    }
+    else
+    {
+        startTime = new Date() - (min * 60 + second) * 1000;
+    }
     const timerInterval = setInterval(() => {
         if (!running) {
             clearInterval(timerInterval);
@@ -94,11 +104,13 @@ const go = () => {
             document.getElementById('startButton').disabled = true;
             document.getElementById('stopButton').disabled = true;
         }
-    }, 50); // 50ms 更新一次显示
+    }, 5); // 5ms 更新一次显示
 }
 
 function stop() {
     running = false;
+    isSetStartTime = 1;
+    setStartTime = new Date();
     document.getElementById('startButton').disabled = false;
     document.getElementById('stopButton').disabled = true;
     document.getElementById('renewButton').disabled = false;
