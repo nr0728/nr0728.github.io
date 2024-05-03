@@ -67,6 +67,9 @@
         .project:hover {
             transform: translateY(-10px);
         }
+        .nounderline {
+            text-decoration: none;
+        }
         footer {
             background-color: #333;
             color: #fff;
@@ -85,12 +88,12 @@
 
         <div class="projects">
             <div class="project">
-                <a href="https://github.com/nr0728/timer"><h2 style="color: #e74c3c;">nr0728/timer</h2></a>
+                <a href="https://github.com/nr0728/timer" class="nounderline"><h2 style="color: #e74c3c;">nr0728/timer</h2></a>
                 <p>An easy-to-use timer made by HTML, JavaScript and CSS.</p>
                 <button onclick="redirectToTimer()">Access the Demo</button>
             </div>
             <div class="project">
-                <a href="https://github.com/nr0728/happy-2023-year"><h2 style="color: #e74c3c;">nr0728/happy-2023-year</h2></a>
+                <a href="https://github.com/nr0728/happy-2023-year" class="nounderline"><h2 style="color: #e74c3c;">nr0728/happy-2023-year</h2></a>
                 <p>A simple firework made by HTML and JavaScript.</p>
                 <button onclick="redirectToFirework()">Access the Demo</button>
             </div>
@@ -98,7 +101,7 @@
     </div>
 
     <footer>
-        <p>© 2024 <a href="https://nr0728.github.io"><font color="#39c5bb">nr0728</font></a>. All rights reserved.</p>
+        <p>© 2024 <a href="https://nr0728.github.io" class="nounderline"><font color="#39c5bb">nr0728</font></a>. All rights reserved.</p>
     </footer>
 
     <script>
