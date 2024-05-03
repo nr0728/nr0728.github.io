@@ -1,1 +1,115 @@
-<h1><a href="/timer">Timer</a></h1>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CQYC-OIer</title>
+    <style>
+        @font-face {
+            font-family: 'Google Sans';
+            src: url('/5-Timer/fonts/GoogleSans-Regular.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Google Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #e74c3c;
+        }
+        p {
+            font-family: 'Google Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        button {
+            font-family: 'Google Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #39c5bb;
+        }
+        .projects {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .project {
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-10px);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hi there 👋 Here is nr0728</h1>
+        <p>An OIer from Chongqing Yucai Secondary School, who is interested in programming.</p>
+        <button onclick="redirectToHomepage()">My Profile in Luogu</button>
+
+        <div class="projects">
+            <div class="project">
+                <h2 style="color: #e74c3c;">nr0728/timer</h2>
+                <p>An easy-to-use timer with user-friendly UI & rich features made by HTML, JavaScript and CSS.</p>
+                <button onclick="redirectToTimer()">Visit Demo</button>
+            </div>
+            <div class="project">
+                <h2 style="color: #e74c3c;">nr0728/happy-2023-year</h2>
+                <p>Firework made by HTML & JS./p>
+                <button onclick="redirectToFirework()">Visit Demo</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 <a href="https://nr0728.github.io"><font color="#39c5bb">nr0728</font></a>. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function redirectToHomepage() {
+            window.location.href = "http://www.luogu.com/user/682739";
+        }
+        function redirectToTimer() {
+            window.location.href = "/timer";
+        }
+        function redirectToFirework() {
+            window.location.href = "/happy-2023-year";
+        }
+    </script>
+</body>
+</html>
